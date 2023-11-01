@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Generell metadata start-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Oda Emilie V. Jakobsen">
+    <meta name="description" content="Pink runners - at vero eos et accusamus et iusto odio dignissimos ducimus qui.">
+    <!--slutt-->
+    <!--Facebook metadata start-->
+    <meta property="og:title" content="Kule pink runners av Shosies!">
+    <meta property="og:url" content="https://schema.org/Offer">
+    <meta property="og:description" content="Pink runners - at vero eos et accusamus et iusto odio dignissimos">
+    <meta property="og:image" content="https://cdn.pixabay.com/photo/2017/07/25/14/50/shoes-2538424_1280.jpg">
+    <!--slutt-->
     <link href="assets/icons/css/fontawesome.css" rel="stylesheet">
     <link href="assets/icons/css/brands.css" rel="stylesheet">
     <link href="assets/icons/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/logo1.png">
+    
     <title>Shosies - Pink runners</title>
 </head>
 <body>
@@ -31,38 +43,64 @@
                 <li><a href="#">Sale</a></li>
             </ul>
         </nav>
-        <main>
+        <main itemscope itemtype="https://schema.org/Product">
             <nav id="breadcrumbs">
-                <ul>
-                    <li><a href="index.html">Home / </a></li>
-                    <li><a href="index.html">Running shoes / </a></li>
-                    <li><a href="index.html">Pink runners </a></li>
+                <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="index.html"> 
+                            <span itemprop="name">Home / </span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="index.html">
+                            <span itemprop="name">Running shoes / </span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="index.html">
+                            <span itemprop="name">Pink runners</span>
+                        </a>
+                        <meta itemprop="position" content="3">
+                    </li>
                 </ul>
             </nav>
+
             <div class="left-content-container flex-items">
-                <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies" id="active-img">
+                <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies" id="active-img" itemprop="image">
                 <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies">
                 <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies">
                 <img src="img/pink-shoes.jpeg" alt="Rosa joggesko fra merket Shosies">
             </div>
+
             <section class="right-content-container flex-items">
                 <span id="brand-name">
                     <a href="#">Shosies</a>
                 </span>
-                <h3>Pink runners</h3>
-                <span>
-                    1499,00 kr
-                </span>
+                <h3 itemprop="name">Pink runners</h3>
+                <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/aggregateRating">
+                    <meta itemprop="reviewCount" content="100">
+                    <meta itemprop="ratingValue" content="4.4">
+                </div>
+
+                <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <meta itemprop="priceCurrency" content="NOK">
+                    <span itemprop="price" content="1499.00">1499,00 kr</span>
+                </div>
                 <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati</p>
                 <form>
                     <label for="size">Size:</label>
                     <select name="size" id="size">
-                        <option value="36">36</option>
-                        <option value="37">37</option>
-                        <option value="38">38</option>
-                        <option value="39">39</option>
-                        <option value="40">40</option>
-                        <option value="41">41</option>
+                        <option value="36" itemprop="size"></option>
+                        <option value="37" itemprop="size">37</option>
+                        <option value="38" itemprop="size">38</option>
+                        <option value="39" itemprop="size">39</option>
+                        <option value="40" itemprop="size">40</option>
+                        <option value="41" itemprop="size">41</option>
                     </select>
                     <button>Add to cart</button>
                 </form>
